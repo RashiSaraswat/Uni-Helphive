@@ -1,30 +1,54 @@
 Helphive
 
-Helphive is a web-based platform designed to streamline and enhance the university experience by providing students with a centralized hub for services like booking help, accessing resources, and connecting with service providers.
+Helphive is a web-based platform designed to help everyday people connect with trusted service providers and easily book the services they need — from plumbing and cleaning to tutoring, home repairs, and more.
 
 🚀 Features
 
-🔒 User Registration and Login (with session-based authentication)
+    🔒 User Registration and Login (with session-based authentication)
 
-🛎️ Service Browsing and Provider Listings
+    🛎️ Service Browsing and Provider Listings
 
-📅 Booking System for Services
+    📅 Booking System for Services
 
-💬 User Reviews and Feedback
+    💬 User Reviews and Feedback
 
-🧾 MySQL Database Integration
+    🧾 MySQL Database Integration
 
-🎨 Styled Templates for All Pages
+    🎨 Styled Templates for All Pages
 
 
 🛠️ Technologies Used
 
-Frontend: HTML, CSS (with optional JS)
+    Frontend: HTML, CSS (with optional JS)
+    
+    Backend: Python (Flask)
+    
+    Database: MySQL
+    
+    Templates: Jinja2
+    
+    Others: werkzeug for password hashing, mysql-connector-python for DB connection
 
-Backend: Python (Flask)
+Helphive/
 
-Database: MySQL
+├── static/                 # Static assets (images, CSS)
 
-Templates: Jinja2
+├── templates/              # Jinja2 HTML templates
 
-Others: werkzeug for password hashing, mysql-connector-python for DB connection
+├── app.py                  # Main Flask application
+
+├── create_db.sql           # SQL schema for creating MySQL tables
+
+├── README.md               # Project documentation
+
+└── backup of all codes.docx  # Backup document
+
+    ⚙️ Setup Instructions 
+    
+    ✅ Requirements
+    
+        Python 3.x
+    
+        MySQL Server running locally or remotely
+    
+        Database named helphive
