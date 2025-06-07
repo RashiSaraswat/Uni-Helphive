@@ -1,0 +1,235 @@
+
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background: #f9f9f9;
+color: #333;
+}
+/* General Headers */
+h2 {
+text-align: center;
+margin: 40px 0 20px;
+font-size: 24px;
+}
+/* Navbar */
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 40px;
+background-color: whitesmoke;
+border-bottom: 1px solid #ddd;
+}
+.logo {
+font-weight: bold;
+font-size: 24px;
+color: #4a90e2;
+}
+.navbar nav {
+display: flex;
+align-items: center;
+gap: 20px;
+}
+.navbar nav a {
+text-decoration: none;
+color: #333;
+font-size: 16px;
+}
+.login-button {
+background-color: #3478f6;
+border: none;
+color: white;
+padding: 8px 16px;
+border-radius: 6px;
+cursor: pointer;
+font-size: 14px;
+}
+.welcome-text {
+    display: inline-block;
+    background-color: #e0f2ff;
+    color: #2563eb;
+    padding: 8px 16px;
+    margin: 0 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+    font-size: 14px;
+}
+
+.welcome-text:hover {
+    background-color: #d1eaff;
+}
+
+
+/* Main Section */
+.container {
+display: flex;
+justify-content: space-between;
+padding: 40px 60px;
+flex-wrap: wrap;
+}
+.content {
+flex: 1;
+min-width: 300px;
+max-width: 600px;
+}
+.content h2 {
+color: #3478f6;
+font-size: 35px;
+text-align: left;
+}
+.content h2 span {
+font-weight: normal;
+font-size: 20px;
+}
+.content p {
+margin-top: 20px;
+line-height: 1.6;
+}
+.images {
+display: flex;
+flex-direction: column;
+gap: 10px;
+margin-left: 40px;
+}
+.images img {
+width: 250px;
+height: auto;
+border-radius: 8px;
+}
+/* Why Our Product */
+.why-product {
+max-width: 800px;
+margin: 0 auto 40px auto;
+text-align: center;
+}
+/* Reviews */
+.reviews {
+max-width: 1000px;
+margin: 0 auto;
+}
+.rating-bar {
+background: #e0e0e0;
+padding: 15px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+border-radius: 8px;
+}
+.star-img img,
+.stars img {
+width: 18px;
+height: 18px;
+vertical-align: middle;
+margin-right: 4px;
+}
+.rating-bar input[type="text"] {
+padding: 8px 12px;
+font-size: 14px;
+flex: 1;
+min-width: 200px;
+margin: 10px 0;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+.rating-bar form button {
+background-color: #4a90e2;
+color: white;
+border: none;
+padding: 10px 16px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 14px;
+}
+.review-cards {
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+flex-wrap: wrap;
+gap: 20px;
+}
+.card {
+background: white;
+padding: 20px;
+border-radius: 8px;
+flex: 1;
+min-width: 280px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.avatar {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+font-size: 18px;
+margin-bottom: 10px;
+}
+.stars {
+margin-bottom: 5px;
+font-weight: bold;
+color: #333;
+}
+/* Upcoming Services */
+.services {
+display: flex;
+justify-content: center;
+gap: 50px;
+margin: 40px 0;
+}
+.service-card {
+background-color: #f1f1f1;
+padding: 20px;
+width: 200px;
+border-radius: 10px;
+}
+.service-card img {
+width: 100%;
+height: 180px;
+object-fit: cover;
+border-radius: 5px;
+}
+.service-title {
+margin-top: 10px;
+font-weight: bold;
+}
+/* Footer */
+footer {
+margin-top: 40px;
+}
+.contact-section {
+background-color: #4A90E2;
+color: white;
+padding: 15px;
+font-weight: bold;
+text-align: center;
+}
+.contact-details {
+background-color: #d0e6ff;
+padding: 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+}
+.contact-info {
+flex: 1;
+min-width: 250px;
+text-align: left;
+padding: 10px;
+}
+.social-icons {
+display: flex;
+gap: 20px;
+font-size: 24px;
+padding: 10px;
+}
+.social-icons i {
+cursor: pointer;
+}

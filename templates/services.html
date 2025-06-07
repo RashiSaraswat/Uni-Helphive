@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>HelpHive</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='services.css') }}" />
+<!-- Font Awesome for social media icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+<div class="logo">HelpHive</div>
+<nav>
+<a href="{{ url_for('home') }}">Home</a>
+<a href="{{ url_for('services') }}">Services</a>
+<a href="{{ url_for('login') }}"> <button class="login-button">Login</button> </a>
+</nav>
+</header>
+<!-- Services Section -->
+<section class="services">
+<h2>Services Provided</h2>
+<div class="cards">
+<!-- Cleaning -->
+<div class="card">
+<img src="{{ url_for('static', filename='images/cleaning.jpg') }}" alt="Cleaning tools" /> 
+<div class="card-content">
+<h3>Cleaning</h3>
+<p class="rating">Rating: ⭐
+ 4.5 
+</p>
+  <a href="{{ url_for('provider_cleaning') }}"> <button>See More</button> </a>
+</div>
+</div>
+<!-- Electrician -->
+<div class="card">
+<img src="{{ url_for('static', filename='images/electrician.jpg') }}" alt="electrician tools" />
+<div class="card-content">
+<h3>Electrician</h3>
+<p class="rating">Rating: ⭐
+4.7</p>
+  <a href="{{ url_for('provider_electrician') }}"><button>See More</button> </a>
+</div>
+</div>
+<!-- Plumber -->
+<div class="card">
+<img src="{{ url_for('static', filename='images/plumber.jpg') }}" alt="Plumbing tools" /> 
+<div class="card-content">
+<h3>Plumber</h3>
+<p class="rating">Rating: ⭐ 4.3</p>
+ <a href="{{ url_for('provider_plumber') }}"><button>See More</button> </a>
+</div>
+</div>
+<!-- DayCare -->
+<div class="card">
+<img src="{{ url_for('static', filename='images/daycare.jpg') }}" alt="Daycare" /> 
+<div class="card-content">
+<h3>DayCare</h3>
+<p class="rating">Rating:⭐ 4.5</p>
+<a href="{{ url_for('provider_daycare') }}"><button>See More</button> </a>
+</div>
+</div>
+<!-- Doctor -->
+<div class="card">
+<img src="{{ url_for('static', filename='images/doctor.jpg') }}" alt="Doctor tools" /> 
+<div class="card-content">
+<h3>Doctor</h3>
+<p class="rating">Rating: ⭐ 4.8</p>
+<a href="{{ url_for('provider_doctor') }}"><button>See More</button> </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Section -->
+<footer>
+<div class="contact-section">Contact Us</div>
+<div class="contact-details">
+<div class="contact-info">
+<p>For any queries</p>
+</div>
+<div class="contact-info">
+<p>Call: 12345678</p>
+<p>Email: HelpHive@email.com</p>
+</div>
+<div class="social-icons">
+<i class="fab fa-linkedin"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-facebook"></i>
+</div>
+</div>
+</footer>
+</body>
+</html>

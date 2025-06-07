@@ -1,0 +1,100 @@
+body {
+font-family: Arial, sans-serif;
+padding: 30px;
+}
+.container {
+max-width: 800px;
+margin: auto;
+}
+h1{
+text-align: center;
+color:#3f80f3;
+}
+h2 {
+text-align: center;
+margin-bottom: 30px;
+}
+form {
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+.row {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+}
+.input-group {
+flex: 1;
+display: flex;
+flex-direction: column;
+}
+.input-group.full-width {
+flex: 100%;
+}
+.input-group label {
+margin-bottom: 5px;
+}
+.input-group input,
+.input-group select,
+.input-group textarea {
+padding: 10px;
+font-size: 16px;
+border: 2px solid #000;
+border-radius: 2px;
+}
+.time-slot .time-select {
+display: flex;
+gap: 10px;
+align-items: center;
+}
+.time-slot input {
+width: 80px;
+}
+.time-slot select {
+width: 70px;
+padding: 10px;
+}
+/* Payment Section */
+.payment-section {
+margin-top: 40px;
+}
+.payment-section h2 {
+margin-bottom: 20px;
+}
+.form-group {
+margin-bottom: 25px;
+text-align: left;
+}
+.form-group label {
+font-size: 16px;
+}
+.radio-group {
+display: flex;
+gap: 50px;
+margin-top: 10px;
+}
+.radio-group label {
+font-size: 16px;
+}
+input[type="radio"] {
+margin-right: 8px;
+transform: scale(1.4);
+vertical-align: middle;
+}
+.btn {
+background-color: #3f80f3;
+color: white;
+padding: 12px 30px;
+font-size: 16px;
+border: none;
+border-radius: 25px;
+cursor: pointer;
+transition: background 0.3s ease;
+margin-top: 20px;
+display: block;
+margin-left: auto;
+}
+.btn:hover {
+background-color: #3169c9;
+}

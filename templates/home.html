@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title> HelpHive Homepage</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HelpHive Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='home-style.css') }}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      background-image: url("{{ url_for('static', filename='images/background.jpeg') }}");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  </style>
+</head>
+<body>
+<!-- Navbar -->
+<div class="navbar">
+  <div class="logo">HelpHive</div>
+  <nav>
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('services') }}">Services</a>
+    {% if user_name %}
+      <span class="welcome-text">Welcome, {{ user_name }}</span>
+      <a href="{{ url_for('logout') }}"> <button class="login-button">Logout</button> </a>
+    {% else %}
+      <a href="{{ url_for('login') }}"> <button class="login-button">Login</button> </a>
+    {% endif %}
+  </nav>
+</div>
+
+<main class="container">
+  <section class="content">
+    <h2>Welcome to HelpHive –<br><span>Your One-Stop Solution for Home and Health Services!</span></h2>
+    <p>
+      At HelpHive, we go beyond just cleaning – we’re your trusted partner for a range of essential home and wellness services.
+      From expert home cleaning and skilled electricians and plumbers, to professional daycare nurses and even doctor appointments at home,
+      we bring convenience, care, and quality right to your doorstep.
+    </p>
+  </section>
+  <section class="images">
+    <img src="{{ url_for('static', filename='images/cleaning.jpg') }}" alt="Cleaning" /> 
+    <img src="{{ url_for('static', filename='images/electrician.jpg') }}" alt="Electrician" />
+    <img src="{{ url_for('static', filename='images/doctor.jpg') }}" alt="Doctor" /> 
+  </section>
+</main>
+
+<!-- Why Our Product -->
+<section class="why-product">
+  <h2>Why our product?</h2>
+  <p>
+    Professional cleaning services are valuable because they save time, improve hygiene,
+    enhance aesthetics, and provide specialized expertise for a thorough clean. They can also
+    boost employee productivity in offices by creating a healthier and more comfortable work
+    environment.
+  </p>
+</section>
+
+<!-- Customer Reviews -->
+<section class="reviews">
+  <h2>What our Customers say</h2>
+  <div class="rating-bar">
+    <span>Overall Rating</span>
+    <span class="star-img">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Five-pointed_star.svg" alt="star">
+      4.8
+    </span>
+    <input type="text" name="review" placeholder="Type your review" />
+    <form>
+      <button type="submit">Write a Review</button>
+    </form>
+  </div>
+  <div class="review-cards">
+    <div class="card">
+      <div class="avatar" style="background-color: #e91e63;">A</div>
+      <div class="stars">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Five-pointed_star.svg" alt="star">
+        4.8
+      </div>
+      <p><strong>Aman ABC</strong></p>
+      <p>HelpHive's cleaning team was fantastic! They arrived on time, were super friendly, and left my home spotless.</p>
+    </div>
+    <div class="card">
+      <div class="avatar" style="background-color: #ff9800;">B</div>
+      <div class="stars">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Five-pointed_star.svg" alt="star">
+        4.5
+      </div>
+      <p><strong>Barry Bc</strong></p>
+      <p>The team was professional and efficient, and they brought all their own supplies. My kitchen and bathrooms look brand new!</p>
+    </div>
+    <div class="card">
+      <div class="avatar" style="background-color: #3f51b5;">C</div>
+      <div class="stars">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Five-pointed_star.svg" alt="star">
+        4.0
+      </div>
+      <p><strong>Carmine cv</strong></p>
+      <p>AMAZING service</p>
+    </div>
+  </div>
+</section>
+
+<!-- Upcoming Services -->
+<section class="upcoming">
+  <h2>Upcoming Services</h2>
+  <div class="services">
+    <div class="service-card">
+      <img src="{{ url_for('static', filename='images/salon&spa.jpg') }}" alt="salon&spa" /> 
+      <div class="service-title">Salon & Spa</div>
+    </div>
+    <div class="service-card">
+      <img src="{{ url_for('static', filename='images/homepainting.jpg') }}" alt="homepainting" />
+      <div class="service-title">Home Painting</div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="contact-section">Contact Us</div>
+  <div class="contact-details">
+    <div class="contact-info">
+      <p>For any queries</p>
+    </div>
+    <div class="contact-info">
+      <p>Call: 12345678</p>
+      <p>Email: HelpHive@email.com</p>
+    </div>
+    <div class="social-icons">
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-facebook"></i>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

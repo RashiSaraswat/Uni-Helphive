@@ -1,0 +1,98 @@
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background-color: #ffffff;
+}
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 40px;
+background-color: white;
+border-bottom: 1px solid #eee;
+}
+.logo {
+font-size: 28px;
+font-weight: bold;
+}
+.nav-links {
+display: flex;
+align-items: center;
+gap: 20px;
+}
+.nav-links a {
+text-decoration: none;
+color: black;
+font-size: 16px;
+}
+.login-btn {
+  background-color: #377dff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+.section-title {
+text-align: center;
+margin: 30px 0;
+font-size: 24px;
+}
+.service-card {
+max-width: 900px;
+margin: 0 auto;
+display: flex;
+gap: 20px;
+background-color: #f5f5f5;
+padding: 20px;
+border-radius: 10px;
+align-items: center;
+}
+.image-container img {
+width: 200px;
+height: 150px;
+object-fit: cover;
+border-radius: 8px;
+}
+.info-container {
+flex: 1;
+}
+.info-container h3 {
+margin-top: 0;
+}
+.action-container {
+text-align: center;
+}
+.book-btn {
+background-color: #377dff;
+color: white;
+padding: 10px 16px;
+border: none;
+border-radius: 20px;
+font-weight: bold;
+cursor: pointer;
+}
+.rating {
+margin-top: 10px;
+font-size: 16px;
+}
+.rating span {
+color: gold;
+}
+.star-icon {
+width: 16px;
+height: 16px;
+vertical-align: middle;
+margin-right: 4px;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
