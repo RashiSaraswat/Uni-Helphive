@@ -212,6 +212,7 @@ def provider_doctor():
 
 
 # ---------- BOOKING ----------
+# ---------- BOOKING ----------
 @app.route('/book/<int:provider_id>', methods=['GET', 'POST'])
 def book(provider_id):
     conn = get_db_connection()
@@ -234,26 +235,58 @@ def book(provider_id):
         customer_name = request.form['customer_name']
         date = request.form['date']
         time = request.form['time']
-        scheduled_time = datetime.strptime(f"{date} {time}", "%Y-%m-%d %H:%M")
 
-        cursor.execute("""
-            INSERT INTO bookings (customer_name, provider_name, service_name, scheduled_time)
-            VALUES (%s, %s, %s, %s)
-        """, (customer_name, provider['name'], service_name, scheduled_time))
-        conn.commit()
+        try:
+            scheduled_time = datetime.strptime(f"{date} {time}", "%Y-%m-%d %H:%M")
 
-        cursor.close()
-        conn.close()
-        return '''
-            <script>
-            alert("Booking confirmed!");
-            window.location.href = "/";
-            </script>
-        '''
+            if scheduled_time < datetime.now():
+                cursor.close()
+                conn.close()
+                return '''
+                    <script>
+                    alert("You cannot book a service in the past.");
+                    window.history.back();
+                    </script>
+                '''
+
+            cursor.execute("""
+                INSERT INTO bookings (customer_name, provider_name, service_name, scheduled_time)
+                VALUES (%s, %s, %s, %s)
+            """, (customer_name, provider['name'], service_name, scheduled_time))
+            conn.commit()
+
+            cursor.close()
+            conn.close()
+            return '''
+                <script>
+                alert("Booking confirmed!");
+                window.location.href = "/";
+                </script>
+            '''
+
+        except ValueError:
+            cursor.close()
+            conn.close()
+            return '''
+                <script>
+                alert("Invalid date or time format. Please try again.");
+                window.history.back();
+                </script>
+            '''
+        except Exception as e:
+            cursor.close()
+            conn.close()
+            return f'''
+                <script>
+                alert("An error occurred: {str(e)}");
+                window.history.back();
+                </script>
+            '''
 
     cursor.close()
     conn.close()
     return render_template('book.html', provider=provider, service_name=service_name, service_description=service_description)
+
 
 # ---------- RUN ----------
 if __name__ == '__main__':
